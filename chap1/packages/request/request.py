@@ -1,6 +1,6 @@
 from packages.location import Location
-from .utils import createSocketManager, parseResponse
-from .constants import NEW_LINE
+from packages.request.utils import createSocketManager, parseResponse
+from packages.request.constants import NEW_LINE
 
 
 

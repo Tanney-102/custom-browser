@@ -1,4 +1,4 @@
-from .utils import sliceProtocol, sliceFragment, sliceSearch ,slicePathname, slicePort
+from packages.location.utils import sliceProtocol, sliceFragment, sliceSearch ,slicePathname, slicePort
 
 class Location:
   def __init__(self, url):

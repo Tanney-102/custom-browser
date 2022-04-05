@@ -1,6 +1,6 @@
 import socket
 import ssl
-from .constants import NEW_LINE
+from packages.request.constants import NEW_LINE
 
 def createSocketManager(host, needSSL):
   socketManager = socket.socket(
