@@ -2,8 +2,6 @@ from packages.location import Location
 from packages.request.utils import createSocketManager, parseResponse
 from packages.request.constants import NEW_LINE
 
-
-
 def get(url):
   return send(url, 'GET')
 
