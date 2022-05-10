@@ -1,4 +1,7 @@
 import packages.request as request
+# from packages.browser import Browser
+from packages.htmlParser import HTMLParser
+from packages.utils import printHTMLTree
 
 def printTextInTagsOnly(textHtml):
   inAngle = False
@@ -16,5 +19,12 @@ if __name__ == '__main__':
   DEFAULT_URL = 'http://example.org' 
   url = DEFAULT_URL if len(sys.argv) <= 1 else sys.argv[1]
 
+  # printTextInTagsOnly(response['body'])
+
+  # browser = Browser()
+  # browser.run()
+  # browser.loadPage(url)
+  
   response = request.get(url)
-  printTextInTagsOnly(response['body'])
+  nodes = HTMLParser(response['body']).parse()
+  printHTMLTree(nodes)
